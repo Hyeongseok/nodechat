@@ -1,0 +1,14 @@
+{
+  "name": "nodechat",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "react": "~0.13.3",
+    "postal.js": "~1.0.6",
+    "jquery": "~2.1.4",
+    "momentjs": "~2.10.6",
+    "conduitjs": "~0.3.3",
+    "lodash": "~3.10.1"
+  }
+}

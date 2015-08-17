@@ -1,0 +1,17 @@
+{
+  "name": "redis-first",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "stop": "echo not implemeneted",
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "flow-maintained": "^0.2.4",
+    "redis": "^0.12.1"
+  }
+}

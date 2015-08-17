@@ -1,0 +1,13 @@
+{
+  "name": "secondapp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "stop": "echo not implemeneted",
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "socket.io": "^1.3.6"
+  }
+}
