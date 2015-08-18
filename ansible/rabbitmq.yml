@@ -1,5 +1,0 @@
-- hosts: tag_RabbitMQ_Role
-  remote_user: ubuntu
-  sudo: yes
-  roles:
-    - rabbitmq
