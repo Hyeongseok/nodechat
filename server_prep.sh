@@ -2,4 +2,5 @@
 
 source ./set_env.sh $1
 
-#grunt prep
+npm install 
+./node_modules/.bin/grunt prep
