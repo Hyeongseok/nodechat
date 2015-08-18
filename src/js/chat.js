@@ -2,7 +2,7 @@ var PacktChat = window.PacktChat || {};
 
 PacktChat.Chat = function(el) {
     var $root = $('#' + el)
-    ,   socket = io.connect('http://nodechat.sandbox:3000/packtchat')
+    ,   socket = io.connect('undefined')
     ,   me = null
     ,   connected = false
     ;
