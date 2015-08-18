@@ -2,5 +2,5 @@
 
 source ./set_env.sh $1
 
-npm install 
+sudo npm install 
 ./node_modules/.bin/grunt prep
