@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        git_head: process.env.GIT_HEAD,
         nodeunit: {
             all: ['tests/*.js']
         },
@@ -47,6 +48,18 @@ module.exports = function(grunt) {
                 ],
                 dest: 'static/js/Frameworks.js'
             }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    'static/js/ChatPage.<%= git_head %>.min.js': '<%= concat.app.dest %>'
+                ,   'static/js/Frameworks.<%= git_head %>.min.js': '<%= concat.frameworks.dest %>'
+                }
+            }
+        },
+        watch: {
+            files: ['src/js/*.js']
+        ,   tasks: ['default']
         }
     });
     
@@ -56,7 +69,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-preprocess');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
-    grunt.registerTask('default', ['nodeunit', 'preprocess', 'clean', 'jshint', 'concat:app', 'concat:frameworks']);
+    grunt.registerTask('default', ['nodeunit', 'preprocess', 'clean', 'jshint', 'concat:app', 'concat:frameworks', 'uglify']);
     grunt.registerTask('prep', ['nodeunit', 'preprocess']);
 };

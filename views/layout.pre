@@ -2,9 +2,9 @@
 <html>
 <head>
   <title><%= title %></title>
-  <link rel="stylesheet" href="/css/cosmo.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/socket.io.js"></script>
+  <link rel="stylesheet" href="<!--@echo STATIC_URL -->/css/cosmo.min.css">
+  <link rel="stylesheet" href="<!--@echo STATIC_URL -->/css/style.css">
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
 
   <!-- @if NODE_ENV='production' -->
   <script type="text/javascript" src="<!--@echo STATIC_URL -->/js/Frameworks.<!-- @echo GIT_HEAD -->.min.js"></script>
@@ -13,7 +13,6 @@
   <!-- @if NODE_ENV!='production' -->
   <script type="text/javascript" src="<!--@echo STATIC_URL -->/js/Frameworks.js"></script>
   <!-- @endif -->
-
 </head>
 <body>
   <div class="container">
@@ -30,7 +29,7 @@
       </div>
     </div>
     <div class="row">
-      <%- body %>
+    <%- body %>
     </div>
   </div>
   <div class="container">
