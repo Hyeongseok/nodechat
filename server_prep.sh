@@ -3,4 +3,5 @@
 source ./set_env.sh $1
 
 npm install 
-sudo grunt prep
+sudo chown -R ubuntu:ubuntu .
+grunt prep
